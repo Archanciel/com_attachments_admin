@@ -98,22 +98,22 @@ if ( $this->parent_title ) {
 	   <input type="text" name="description" id="description"
 		  title="<?php echo JText::_('DESCRIPTION_DESCRIPTION'); ?>"
 		  size="75" maxlength="255" value="" /></p>
-<?php if ( $this->show_user_field_1 ): ?>
 	<p>
+<?php if ( $this->show_user_field_1 ): ?>
 	   <label for="user_field_1"><b><?php echo $this->user_field_1_name; ?>:</b></label>
-	   <input type="text" name="user_field_1" id="user_field_1" size="5" maxlength="5" value="" />
+	   <input type="text" name="user_field_1" id="user_field_1" size="1" maxlength="5" value="" />
 	   <label for="file_size"><b><?php echo 'File size (bytes)'; ?>:</b></label>
-	   <input type="text" name="file_size" id="file_size" size="10" maxlength="10" value="" />
-	</p>
+	   <input type="text" name="file_size" id="file_size" size="5" maxlength="10" value="" />
 <?php endif; ?>
 <?php if ( $this->show_user_field_2 ): ?>
-	<p><label for="user_field_2"><b><?php echo $this->user_field_2_name; ?>:</b></label>
-	   <input type="text" name="user_field_2" id="user_field_2" size="70" maxlength="100" value="" /></p>
+	   <label for="user_field_2"><b><?php echo $this->user_field_2_name; ?>:</b></label>
+	   <input type="text" name="user_field_2" id="user_field_2" size="1" maxlength="5" value="" />
 <?php endif; ?>
 <?php if ( $this->show_user_field_3 ): ?>
-	<p><label for="user_field_3"><b><?php echo $this->user_field_3_name; ?>:</b></label>
-	   <input type="text" name="user_field_3" id="user_field_3" size="70" maxlength="100" value="" /></p>
+	   <label for="user_field_3"><b><?php echo $this->user_field_3_name; ?>:</b></label>
+	   <input type="text" name="user_field_3" id="user_field_3" size="1" maxlength="5" value="" />
 <?php endif; ?>
+	</p>
 	</fieldset>
 	<input type="hidden" name="MAX_FILE_SIZE" value="524288" />
 	<input type="hidden" name="save_type" value="upload" />
