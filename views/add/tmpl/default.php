@@ -99,11 +99,11 @@ if ( $this->parent_title ) {
 		  title="<?php echo JText::_('DESCRIPTION_DESCRIPTION'); ?>"
 		  size="75" maxlength="255" value="" /></p>
 	<p>
-<?php if ( $this->show_user_field_1 ): ?>
+<?php if ( $this->show_user_field_1 ): // JPS modif start on previous line ?>
 	   <label for="user_field_1"><b><?php echo $this->user_field_1_name; ?>:</b></label>
 	   <input type="text" name="user_field_1" id="user_field_1" size="1" maxlength="5" value="" />
 	   <label for="file_size"><b><?php echo 'File size (bytes)'; ?>:</b></label>
-	   <input type="text" name="file_size" id="file_size" size="5" maxlength="10" value="" />
+	   <input type="text" name="file_size" id="file_size" size="9" maxlength="10" value="" />
 <?php endif; ?>
 <?php if ( $this->show_user_field_2 ): ?>
 	   <label for="user_field_2"><b><?php echo $this->user_field_2_name; ?>:</b></label>
@@ -112,7 +112,7 @@ if ( $this->parent_title ) {
 <?php if ( $this->show_user_field_3 ): ?>
 	   <label for="user_field_3"><b><?php echo $this->user_field_3_name; ?>:</b></label>
 	   <input type="text" name="user_field_3" id="user_field_3" size="1" maxlength="5" value="" />
-<?php endif; ?>
+<?php endif; // JPS modif end on next line ?>
 	</p>
 	</fieldset>
 	<input type="hidden" name="MAX_FILE_SIZE" value="524288" />
