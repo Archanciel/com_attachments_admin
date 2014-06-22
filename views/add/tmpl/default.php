@@ -39,7 +39,7 @@ if ( $this->parent_title ) {
 ?>
 <form class="attachmentsBackend" enctype="multipart/form-data"
 	  name="adminForm" id="adminForm"
-	  action="<?php echo $this->save_url; ?>" method="post">
+	  action="<?php echo $this->save_url; ?>" method="get"> <!-- JPS: replace post by get so that the selected file is not physically uploaded in the web server tmp dir ! -->
 	<fieldset class="adminform">
 		<legend><?php echo JText::_('ADD_ATTACHMENT'); ?></legend>
 <?php if ( $this->new_parent ): ?>

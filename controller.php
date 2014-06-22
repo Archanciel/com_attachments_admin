@@ -857,7 +857,7 @@ class AttachmentsAdminController extends JController
 	function saveNew()
 	{
 		// Check for request forgeries
-		JRequest::checkToken() or die( 'Invalid Token');
+	//	JRequest::checkToken() or die( 'Invalid Token'); JPS: since form method is get instead of post, checkToken fails !
 
 		// Make sure we have a user
 		$user =& JFactory::getUser();
@@ -907,7 +907,8 @@ class AttachmentsAdminController extends JController
 
 		// Set up the new record
 		$row =& JTable::getInstance('Attachments', 'Table');
-		if (!$row->bind(JRequest::get('post'))) {
+// 		if (!$row->bind(JRequest::get('post'))) {
+		if (!$row->bind(JRequest::get('get'))) {  // JPS: since the form method was changed from post to get
 			$errmsg = $row->getError() . ' (ERR 24)';
 			JError::raiseError(500, $errmsg);
 			}
